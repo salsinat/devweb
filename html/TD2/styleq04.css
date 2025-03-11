@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+}
+
+thead {
+    border:medium double #e18474;
+}
+
+table {
+    caption-side: bottom;
+    border:thick solid #4aa4ba;
+    border-collapse: collapse;
+}
+
+td {
+    border:thin solid #e18474;
+}
+
+th {
+    border:thin solid #e18474;
+}
+
+tfoot {
+    border:medium double #e18474;
+}
+
+div table {
+    background-color: #ceecf8;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+div td {
+    background-color: white;
+}
+
+div th {
+    color: white;
+    background-color: #4aa4ba;
+}
+

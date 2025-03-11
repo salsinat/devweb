@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size:xx-large;
+}
+
+h2 {
+    text-align: center;
+    background-color: #e0bf81;
+}
+
+ul li {
+    list-style-image: url(images/europeen_icone.jpg);
+}
+
+ol li {
+    list-style-type: upper-roman;
+}
+
+dt {
+    color: #e18474;
+    font-variant: small-caps;
+}
+
+dd {
+    font-style: italic;
+}

@@ -1,0 +1,28 @@
+h1 {
+    font: bold Arial;
+    color: white;
+}
+
+section {
+    background-color: #586359;
+}
+
+p {
+    background-color: #e0bf81;
+}
+
+div {
+    background-color: #ae7558;
+}
+
+article {
+    background-color: #e18474;
+}
+
+figure {
+    background-color: #e0bf81;
+}
+
+footer {
+    background-color: #e0bf81;
+}

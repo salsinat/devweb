@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0bf81;
+    background-image: linear-gradient(#e18474,#e0bf81);
+    background-repeat: no-repeat;
+    text-align: justify;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit
+}
+
+ol > li {
+    color:#1d1f1d;
+    list-style-type:decimal;
+}
+
+ul > li {
+    color: black;
+    list-style-type: disc;
+}
+
+ul h1 {
+    font-weight: 900;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+section > h1 {
+    background-color: #586359;
+    color: white;
+    text-align: center;
+}
+
+

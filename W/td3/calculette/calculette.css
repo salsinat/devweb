@@ -1,0 +1,60 @@
+/*.color1 {color: #121814;} //noir
+.color2 {color: #12455a;} //bleu
+.color3 {color: #20a2d8;} //bleu clair
+.color4 {color: #20dbd8;} //vert
+.color5 {color: #eaefed;} //beige */
+
+body {
+    font-family: Arial;
+}
+
+body, h1, p{
+    margin : 0;
+}
+
+h1{
+    font-weight : lighter;
+    font-size : 1.4em;
+    text-align : center;
+    line-height: 2em;
+}
+
+form, div {
+    border : 2px solid teal;
+    max-width : 90%;
+    margin : auto;
+    padding : 2%;
+    background-color: white;
+}
+
+div{
+  margin-top : 1em;
+  text-align : center;
+}
+section{
+    border : 2px solid silver;
+    max-width : 400px;
+    margin : 20px auto;
+    padding : 10px;
+    background-color: #20dbd8;
+}
+
+textarea{
+    width : 98%;
+}
+
+input.calc{
+    margin: 2.2%;
+    margin : auto;
+    margin-bottom : 1em;
+}
+
+
+.rouge{
+    color : red;
+}
+
+p{
+    margin-top : 20px;
+    margin-bottom: 20px;
+}

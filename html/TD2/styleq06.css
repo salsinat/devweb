@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0bf81;
+    background-image: url(images/persan.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: justify;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit
+}
+
+ul li {
+    list-style-type:none;
+}
+
+header {
+    background-color: #e18474;
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+section > h1 {
+    background-color: #586359;
+    color: white;
+    text-align: center;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+article a {
+    background-color: #586359;
+    color: white;
+}

@@ -1,0 +1,38 @@
+h1 {
+    font-weight: lighter;
+    color: white;
+}
+
+section {
+    background-color: #586359;
+}
+
+section > h1 {
+    background-color: #ceecf8;
+    color: black;
+}
+
+p {
+    background-color: #e0bf81;
+}
+
+div {
+    background-color: #ae7558;
+}
+
+div p {
+    font-variant: small-caps !important;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+article {
+    background-color: #e18474;
+}
+
+figure {
+    background-color: #e0bf81;
+}
+
+footer {
+    background-color: #e0bf81;
+}
