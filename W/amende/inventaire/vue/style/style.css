@@ -1,0 +1,117 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+}
+
+body{
+    font-family : Roboto,Arial, sans-serif;
+    width:auto;
+}
+
+h1{
+  font-size : 1.2em;
+}
+
+header {
+  background-color : silver;
+}
+header h1 {
+  font-weight: normal;
+  line-height: 2em;
+  font-size : 1.4em;
+}
+
+section {
+  min-height 	: 3em;
+  text-align 	: left;
+  display 		: grid;
+  grid-template-columns : 1fr 8fr;
+  grid-gap 		: 10px; 
+}
+
+label {
+   text-align : right;  
+}
+
+.erreur {
+  font-size : small;
+  color : red;
+}
+
+input[type="submit"], .ajout {
+  min-height: 2em;
+  min-width : 8em;
+  background-color: rgba(0, 191, 255);
+  font-size:medium;
+  cursor : pointer;
+  color  : white;
+}
+input[name="Valider"], .info {
+  background-color: rgba(0, 255, 34);
+  color : black;
+}
+input[name="Annuler"], .retour {
+  background-color: rgba(255, 174, 0);
+  color : black;
+}
+
+.supprimer {
+  background-color : red;
+  color :white;
+}
+
+.modifier {
+  background-color : rgba(0, 85, 255);
+  color : white;
+}
+
+input[type="number"] {
+  text-align : right;
+  width      : 6em;
+}
+
+a {
+  text-decoration: none;
+  cursor : pointer;
+}
+
+table {
+  margin : auto;
+
+
+}
+
+table, td, th{
+  border : 1px solid silver;
+  border-collapse : collapse;
+  line-height : 2em;
+}
+
+td, th{
+  padding-left : 5px;
+  padding-right : 5px;
+}
+
+th{
+  background-color: lightgrey;
+  font-weight: lighter;
+}
+
+td  {
+  min-width : 4em;
+  text-align : center;
+}
+
+.table_salle td:nth-child(2) {
+  text-align : left;
+}
+
+
+.table_salle_equipt td:nth-child(2) {
+  text-align : left;
+}
+
+
+
+
