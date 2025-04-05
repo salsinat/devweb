@@ -74,5 +74,7 @@ class DelitByInfractionDAO {
         return $this->loadQuery($this->bd->execSQL($this->select . " WHERE id_inf = :id_inf AND id_delit = :id_delit",
                                                    [':id_inf' => $id_inf, ':id_delit' => $id_delit]))[0];
     }
+
+    
 }
 ?>

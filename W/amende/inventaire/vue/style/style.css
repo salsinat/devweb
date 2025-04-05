@@ -174,3 +174,84 @@ td  {
 body.modal-open {
   overflow: hidden;
 }
+
+
+/* infractions details  */
+
+/* Détails */
+.detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.delits-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.delits-table th, .delits-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.delits-table th {
+  background-color: #f8f9fa;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #f1f1f1;
+}
+
+.no-data {
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Actions admin */
+.admin-actions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+select[multiple] {
+  min-height: 150px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+select[multiple] option {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+select[multiple] option:hover {
+  background-color: #f8f9fa;
+}

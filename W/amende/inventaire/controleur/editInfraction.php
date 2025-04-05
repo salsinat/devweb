@@ -1,6 +1,7 @@
 <?php
 ini_set("display_errors",1);
 
+
 // Opération : ajouter, modifier, ou supprimer
 $op 	= (isset($_GET['op'])?$_GET['op']:null);
 $ajout 	= ($op == 'a');
@@ -18,9 +19,6 @@ if ( ($idInf!=null && $ajout) || (($idInf==null) && $modif || $suppr || ($idInf=
 require_once('../modele/infractionDAO.class.php');
 $infractionDAO = new InfractionDAO();
 
-// require_once('../modele/delitDAO.class.php'); 
-// $delitDAO = new DelitDAO();
-// $delits = $delitDAO->getByIdDelit($idInf); 
 
 
 // Initialiser les valeurs
@@ -49,8 +47,34 @@ $valeurs['no_permis'] = (isset($_POST['no_permis'])?trim($_POST['no_permis']):nu
 
 $retour = false;
 
+// Après la gestion de l'infraction
+if (($ajout || $modif) && isset($_POST['delits'])) {
+    require_once('../modele/delitByInfractionDAO.class.php');
+    $delitByInfractionDAO = new DelitByInfractionDAO();
+    
+    // Supprimer les anciennes associations
+    if ($modif) {
+        $delitByInfractionDAO->deleteByInfraction($uneInfraction->getIdInf());
+    }
+    
+    // Ajouter les nouvelles associations
+    foreach ($_POST['delits'] as $idDelit) {
+        $delitByInfraction = new DelitByInfraction($uneInfraction->getIdInf(), $idDelit);
+        $delitByInfractionDAO->insert($delitByInfraction);
+    }
+}
+
+
+
+
 // Traitement du formulaire
 if (isset($_POST['valider'])) {
+	// Validation de la date
+if (empty($valeurs['date_inf'])) {
+    $erreurs['date_inf'] = "La date est obligatoire";
+} elseif (!DateTime::createFromFormat('Y-m-d', $valeurs['date_inf'])) {
+    $erreurs['date_inf'] = "Format de date invalide (AAAA-MM-JJ requis)";
+}
 
 	// Validation des autres champs
 	if (!isset($valeurs['no_immat']) or strlen($valeurs['no_immat'])==0) {

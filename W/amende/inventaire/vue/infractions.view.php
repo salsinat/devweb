@@ -29,7 +29,7 @@
                 }
                 ?>
 
-                <?php if ($_SESSION['is_admin'] || !$_SESSION['is_admin'] ) {echo '<th>Visualiser</th>';} ?>
+                <?php if ($_SESSION['is_admin'] || $_SESSION['is_admin'] ) {echo '<th>Visualiser</th>';} ?>
             </tr>
         </thead>
         <tbody>
