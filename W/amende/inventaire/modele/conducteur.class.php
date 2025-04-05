@@ -1,36 +1,28 @@
 <?php
 
 
-class Conducteur {
-    private $id_conducteur;
-    private $no_permis;
-    private $date_permis;
-    private $nom;
-    private $prenom;
-    private $mdp;  // Mot de passe
 
-    // Constructeur
-    public function __construct($id_conducteur = null, $no_permis = '', $date_permis = '', $nom = '', $prenom = '', $mdp = '') {
-        $this->id_conducteur = $id_conducteur;
+
+
+    class Conducteur {
+        private $no_permis; // Garder no_permis (pas num_permis)
+        private $date_permis;
+        private $nom;
+        private $prenom;
+        private $mdp;
+
+            // Constructeur
+    public function __construct($no_permis = '', $date_permis = '', $nom = '', $prenom = '', $mdp = '') {
         $this->no_permis = $no_permis;
         $this->date_permis = $date_permis;
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->mdp = $mdp;
     }
-
-    // Getter et Setter pour chaque attribut
-    public function getIdConducteur() {
-        return $this->id_conducteur;
-    }
-
-    public function setIdConducteur($id_conducteur) {
-        $this->id_conducteur = $id_conducteur;
-    }
-
-    public function getNoPermis() {
-        return $this->no_permis;
-    }
+    
+        public function getNoPermis() : string {
+            return $this->no_permis;
+        }
 
     public function setNoPermis($no_permis) {
         $this->no_permis = $no_permis;

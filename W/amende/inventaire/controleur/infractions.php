@@ -4,10 +4,12 @@ session_start();
 require_once('../modele/infractionDAO.class.php');  
 require_once('../modele/delitDAO.class.php'); 
 require_once('../modele/delitByInfractionDAO.class.php');  
+require_once('../modele/conducteurDAO.class.php');
 
 $infractionDAO = new InfractionDAO();
 $delitByInfractionDAO = new DelitByInfractionDAO();
 $delitDAO = new DelitDAO();
+$conducteurDAO = new ConducteurDAO();
 
 // Récupérer toutes les infractions
 if ($_SESSION['is_admin']) $lesInfractions = $infractionDAO->getAll();
@@ -28,8 +30,12 @@ foreach($lesInfractions as $uneInfraction) {
     $ch .= '<td>' . $uneInfraction->getIdInf() . '</td>';
     $ch .= '<td>' . $uneInfraction->getDateInf() . '</td>';
     $ch .= '<td>' . $uneInfraction->getNoImmat() . '</td>';
-    $ch .= '<td>' . $uneInfraction->getNoPermis() . '</td>';
+    // $ch .= '<td>' . $uneInfraction->getNoPermis() . '</td>';
+    $no_permis = $uneInfraction->getNoPermis() ?? ''; // Fournit une chaîne vide si null
+    $conducteur = $conducteurDAO->getByNoPermis($no_permis);
+$ch .= '<td>' . ($conducteur->getNoPermis() ?: 'N/A') . ' ' . ($conducteur->getPrenom() ?: 'N/A') . ' ' . ($conducteur->getNom() ?: 'N/A') . '</td>';
     $ch .= '<td>' . $montant . '€</td>';
+    
     
     // Afficher des informations sur l'infraction, par exemple la nature et le montant de l'infraction
     
