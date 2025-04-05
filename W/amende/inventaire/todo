@@ -1,5 +1,5 @@
 ajout / suppression de delit dans ajout/ modif d'infraction
-affichage des delits daan detail
-affichage de nom et prénom dans infraction.php
-confirmation de suppression d'une infraction
-mettre bouton détail pour utilisateur normal
+affichage des delits dans detail
+affichage de nom et prénom dans infraction.php CHECK
+confirmation de suppression d'une infraction CHECK
+mettre bouton détail pour utilisateur normal CHECK (a verifier)

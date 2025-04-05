@@ -35,6 +35,7 @@ foreach($lesInfractions as $uneInfraction) {
     $conducteur = $conducteurDAO->getByNoPermis($no_permis);
 $ch .= '<td>' . ($conducteur->getNoPermis() ?: 'N/A') . ' ' . ($conducteur->getPrenom() ?: 'N/A') . ' ' . ($conducteur->getNom() ?: 'N/A') . '</td>';
     $ch .= '<td>' . $montant . '€</td>';
+    // Lien pour voir les détails de l'infraction
     
     
     // Afficher des informations sur l'infraction, par exemple la nature et le montant de l'infraction
@@ -50,9 +51,10 @@ $ch .= '<td>' . ($conducteur->getNoPermis() ?: 'N/A') . ' ' . ($conducteur->getP
         <img src="../vue/style/corbeille.png">
      </a></td>';
 
-        // Lien pour voir les détails de l'infraction
-        $ch .= '<td><a href="editInfraction.php?op=d&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/visu.png"></a></td>';
+        
     }
+    $ch .= '<td><a href="editInfraction.php?op=d&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/visu.png"></a></td>';
+
     
     // Ajouter la ligne générée au tableau
     $lignes[] = "<tr>$ch</tr>";
