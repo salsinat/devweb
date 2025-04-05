@@ -45,7 +45,10 @@ $ch .= '<td>' . ($conducteur->getNoPermis() ?: 'N/A') . ' ' . ($conducteur->getP
         $ch .= '<td><a href="editInfraction.php?op=m&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/modification.png"></a></td>';
 
         // Lien pour supprimer l'infraction
-        $ch .= '<td><a href="editInfraction.php?op=s&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/corbeille.png"></a></td>';
+        // $ch .= '<td><a href="editInfraction.php?op=s&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/corbeille.png"></a></td>';
+        $ch .= '<td><a href="#" class="delete-infraction" data-id="'.$uneInfraction->getIdInf().'">
+        <img src="../vue/style/corbeille.png">
+     </a></td>';
 
         // Lien pour voir les détails de l'infraction
         $ch .= '<td><a href="editInfraction.php?op=d&id_inf=' . urlencode($uneInfraction->getIdInf()) . '"><img src="../vue/style/visu.png"></a></td>';
